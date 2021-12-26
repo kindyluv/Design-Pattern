@@ -2,18 +2,24 @@ package structuralPattern;
 
 public class WildDuck extends Duck{
 
+
     @Override
-    IQuackBehaviour iQuackBehaviour(IQuackBehaviour quack) {
+    IQuackBehaviour quackBehaviour(IQuackBehaviour quack) {
+        quack.quack();
         return quack;
     }
 
     @Override
     IFlyBehaviour iFlyBehaviour(IFlyBehaviour fly) {
+        fly.fly();
         return fly;
     }
 
     @Override
-    public void display(){
-        super.display();
+    Display display(Display display) {
+        display.display();
+        return display;
     }
+
+
 }
